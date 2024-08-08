@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Job Postings</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+  <h1>Manage Job Postings</h1>
+  <a href="/admin/dashboard">Back to Dashboard</a>
+</header>
+<main>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Company</th>
+      <th>Location</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="jobPosting : ${jobPostings}">
+      <td th:text="${jobPosting.id}"></td>
+      <td th:text="${jobPosting.title}"></td>
+      <td th:text="${jobPosting.company}"></td>
+      <td th:text="${jobPosting.location}"></td>
+    </tr>
+    </tbody>
+  </table>
+</main>
+</body>
+</html>

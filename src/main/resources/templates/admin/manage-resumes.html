@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Resumes</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Manage Resumes</h1>
+    <a href="/admin/dashboard">Back to Dashboard</a>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>File</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="resume : ${resumes}">
+            <td th:text="${resume.id}"></td>
+            <td th:text="${resume.user.id}"></td>
+            <td th:text="${resume.file}"></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>
