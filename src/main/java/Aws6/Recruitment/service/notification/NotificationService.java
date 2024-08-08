@@ -2,7 +2,7 @@ package Aws6.Recruitment.service.notification;
 
 import Aws6.Recruitment.entity.notification.Notification;
 import Aws6.Recruitment.entity.user.User;
-import Aws6.Recruitment.repository.member.UserRepository;
+import Aws6.Recruitment.repository.user.UserRepository;
 import Aws6.Recruitment.repository.notification.NotificationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

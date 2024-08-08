@@ -6,7 +6,7 @@ import Aws6.Recruitment.entity.resume.Resume;
 import Aws6.Recruitment.entity.user.User;
 import Aws6.Recruitment.repository.application.ApplicationRepository;
 import Aws6.Recruitment.repository.jobposting.JobPostingRepository;
-import Aws6.Recruitment.repository.member.UserRepository;
+import Aws6.Recruitment.repository.user.UserRepository;
 import Aws6.Recruitment.repository.resume.ResumeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
