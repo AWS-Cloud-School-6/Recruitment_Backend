@@ -38,4 +38,8 @@ public class Notification {
         this.createdAt = createdAt;
         this.read = read;
     }
+
+    public void setRead(boolean read) {
+        this.read = read;
+    }
 }
