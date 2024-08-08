@@ -3,7 +3,6 @@ package Aws6.Recruitment.service.jobposting;
 import Aws6.Recruitment.entity.jobposting.JobPosting;
 import Aws6.Recruitment.repository.jobposting.JobPostingRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -16,12 +15,12 @@ public class JobPostingService {
     private final JobPostingRepository jobPostingRepository;
 
 
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     public JobPosting createJobPosting(JobPosting jobPosting) {
         return jobPostingRepository.save(jobPosting);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     public JobPosting updateJobPosting(Long id, JobPosting updatedJobPosting) {
         JobPosting existingJobPosting = jobPostingRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Job posting not found"));
