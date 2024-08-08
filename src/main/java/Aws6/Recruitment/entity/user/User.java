@@ -1,10 +1,16 @@
 package Aws6.Recruitment.entity.user;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 
 @Entity
 @Table(name="users")
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class User {
 
         @Id
@@ -25,12 +31,5 @@ public class User {
         @Enumerated(EnumType.STRING)
         private Role role;
 
-        public Long getId() {
-                return id;
-        }
-
-        public void setId(Long id) {
-                this.id = id;
-        }
 
 }

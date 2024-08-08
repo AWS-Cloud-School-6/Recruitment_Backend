@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c35623e-6995-4b34-96c4-0688321c9516" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/user/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +49,13 @@
       </map>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2kNrpdAEerQSswl9N6GSrCZiGJd" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
@@ -52,10 +63,14 @@
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "spring.configuration.checksum": "5345332412868518badf6d8f7b36b7d5"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -72,8 +87,20 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c35623e-6995-4b34-96c4-0688321c9516" name="Changes" comment="" />
+      <created>1723135063026</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723135063026</updated>
+      <workItem from="1723135064570" duration="1157000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
