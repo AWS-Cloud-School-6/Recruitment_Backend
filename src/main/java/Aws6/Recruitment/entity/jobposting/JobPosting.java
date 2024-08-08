@@ -12,9 +12,9 @@ import java.time.LocalDateTime;
 @Getter
 @RequiredArgsConstructor
 public class JobPosting {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
