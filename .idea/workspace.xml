@@ -129,6 +129,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/user/User.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/repository/jobposting/JobPostingRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/repository/member/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/jobposting/JobPostingService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Aws6/Recruitment/RecruitmentApplicationTests.java" beforeDir="false" />
     </list>
@@ -212,7 +213,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723128586324</updated>
       <workItem from="1723128587532" duration="301000" />
-      <workItem from="1723130040076" duration="513000" />
+      <workItem from="1723130040076" duration="905000" />
     </task>
     <servers />
   </component>
