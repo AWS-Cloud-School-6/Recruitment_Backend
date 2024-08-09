@@ -1,6 +1,10 @@
 package Aws6.Recruitment.api.controller.user;
 
+import Aws6.Recruitment.api.dto.user.UserResponseDto;
+import Aws6.Recruitment.entity.response.CommonResult;
+import Aws6.Recruitment.entity.response.SingleResult;
 import Aws6.Recruitment.entity.user.User;
+import Aws6.Recruitment.service.response.ResponseService;
 import Aws6.Recruitment.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,23 +19,19 @@ public class UserController {
 
     private final UserService userService;
 
+    private final ResponseService responseService;
+
 
     @PostMapping
-    public ResponseEntity<String> registerUser(@RequestBody User user) {
+    public CommonResult registerUser(@RequestBody User user) {
         userService.registerUser(user);
-        return ResponseEntity.ok("User registered successfully");
+        return responseService.getSuccessResult();
     }
 
     @GetMapping("/{username}")
-    public ResponseEntity<User> getUser(@PathVariable("username") String username) {
-//        System.out.println(username);
+    public SingleResult<UserResponseDto> getUser(@PathVariable("username") String username) {
         User user = userService.findByUsername(username);
-        return ResponseEntity.ok(user);
+        UserResponseDto userResponseDto = UserResponseDto.toDto(user);
+        return responseService.getSingleResult(userResponseDto);
     }
-//
-//    @GetMapping("/{id}")
-//    public ResponseEntity<Optional<User>> getUserId(@PathVariable("id") Long id) {
-//        Optional<User> user = userService.findById(id);
-//        return ResponseEntity.ok(user);
-//    }
 }
