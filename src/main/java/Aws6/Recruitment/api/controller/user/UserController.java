@@ -22,7 +22,6 @@ public class UserController {
 
     private final ResponseService responseService;
 
-
     @PostMapping
     public CommonResult registerUser(@RequestBody UserRequestDto userRequestDto) {
         userService.registerUser(userRequestDto);

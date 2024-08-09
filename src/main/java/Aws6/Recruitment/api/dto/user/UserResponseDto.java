@@ -1,7 +1,9 @@
 package Aws6.Recruitment.api.dto.user;
 
 import Aws6.Recruitment.entity.user.User;
+import lombok.Data;
 
+@Data
 public class UserResponseDto {
 
     private String username;
