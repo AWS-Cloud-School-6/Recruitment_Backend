@@ -1,5 +1,6 @@
 package Aws6.Recruitment.service.application;
 
+import Aws6.Recruitment.api.dto.application.ApplicationRequestDto;
 import Aws6.Recruitment.entity.application.Application;
 import Aws6.Recruitment.entity.jobposting.JobPosting;
 import Aws6.Recruitment.entity.resume.Resume;
@@ -23,12 +24,12 @@ public class ApplicationService {
     private final ResumeRepository resumeRepository;
 
 //    @PreAuthorize("hasRole('USER')")
-    public Application applyForJob(Long userId, Long jobPostingId, Long resumeId) {
-        User user = userRepository.findById(userId)
+    public Application applyForJob(ApplicationRequestDto applicationRequestDto) {
+        User user = userRepository.findById(applicationRequestDto.getUserId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        JobPosting jobPosting = jobPostingRepository.findById(jobPostingId)
+        JobPosting jobPosting = jobPostingRepository.findById(applicationRequestDto.getJobPostingId())
                 .orElseThrow(() -> new RuntimeException("Job posting not found"));
-        Resume resume = resumeRepository.findById(resumeId)
+        Resume resume = resumeRepository.findById(applicationRequestDto.getResumeId())
                 .orElseThrow(() -> new RuntimeException("Resume not found"));
 
         Application application = Application.builder()

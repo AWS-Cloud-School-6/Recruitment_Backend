@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c35623e-6995-4b34-96c4-0688321c9516" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/dto/resume/ResumeResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/dto/application/ApplicationResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/resume/ResumeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/resume/ResumeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/dto/resume/ResumeRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/dto/resume/ResumeRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/resume/Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/resume/Resume.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/resume/ResumeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/resume/ResumeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/application/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/application/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/application/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/application/ApplicationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
