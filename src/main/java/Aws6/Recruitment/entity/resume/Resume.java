@@ -1,5 +1,6 @@
 package Aws6.Recruitment.entity.resume;
 
+import Aws6.Recruitment.entity.user.User;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -44,8 +45,16 @@ public class Resume {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
+    @ManyToOne(fetch = FetchType.LAZY)  // 연관관계 설정
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;  // 이력서와 사용자 간의 연관관계
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
+    }
+
     @Builder
-    public Resume(String name, String email, String phone, String summary, String education, String experience, String skills) {
+    public Resume(String name, String email, String phone, String summary, String education, String experience, String skills, User user) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -53,8 +62,8 @@ public class Resume {
         this.education = education;
         this.experience = experience;
         this.skills = skills;
+        this.user = user;
     }
-
 }
 
 

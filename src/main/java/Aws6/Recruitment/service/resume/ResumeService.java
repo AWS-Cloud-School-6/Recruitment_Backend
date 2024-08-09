@@ -1,7 +1,10 @@
 package Aws6.Recruitment.service.resume;
 
+import Aws6.Recruitment.api.dto.resume.ResumeRequestDto;
 import Aws6.Recruitment.entity.resume.Resume;
+import Aws6.Recruitment.entity.user.User;
 import Aws6.Recruitment.repository.resume.ResumeRepository;
+import Aws6.Recruitment.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +16,25 @@ public class ResumeService {
 
     private final ResumeRepository resumeRepository;
 
+    private final UserRepository userRepository;
+
 //    @PreAuthorize("hasRole('USER')")
-    public Resume createResume(Resume resume) {
+    public Resume createResume(ResumeRequestDto resumeRequestDto) {
+
+        User user = userRepository.findById(resumeRequestDto.getUserId())
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        Resume resume = Resume.builder()
+                .name(resumeRequestDto.getName())
+                .email(resumeRequestDto.getEmail())
+                .phone(resumeRequestDto.getPhone())
+                .summary(resumeRequestDto.getSummary())
+                .education(resumeRequestDto.getEducation())
+                .experience(resumeRequestDto.getExperience())
+                .skills(resumeRequestDto.getSkills())
+                .user(user)
+                .build();
+
         return resumeRepository.save(resume);
     }
 
