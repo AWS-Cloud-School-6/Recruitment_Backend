@@ -1,12 +1,19 @@
 package Aws6.Recruitment.api.controller.jobposting;
 
+import Aws6.Recruitment.api.dto.jobposting.JobPostingRequestDto;
+import Aws6.Recruitment.api.dto.jobposting.JobPostingResponseDto;
 import Aws6.Recruitment.entity.jobposting.JobPosting;
+import Aws6.Recruitment.entity.response.CommonResult;
+import Aws6.Recruitment.entity.response.ListResult;
+import Aws6.Recruitment.entity.response.SingleResult;
 import Aws6.Recruitment.service.jobposting.JobPostingService;
+import Aws6.Recruitment.service.response.ResponseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("job-postings")
@@ -15,33 +22,37 @@ public class JobPostingController {
 
     private final JobPostingService jobPostingService;
 
+    private final ResponseService responseService;
+
     @PostMapping
-    public ResponseEntity<JobPosting> createJobPosting(@RequestBody JobPosting jobPosting) {
-        JobPosting createdJobPosting = jobPostingService.createJobPosting(jobPosting);
-        return ResponseEntity.ok(createdJobPosting);
+    public CommonResult createJobPosting(@RequestBody JobPostingRequestDto jobPostingRequestDto) {
+        JobPosting createdJobPosting = jobPostingService.createJobPosting(jobPostingRequestDto);
+        return responseService.getSuccessResult();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<JobPosting> updateJobPosting(@PathVariable Long id, @RequestBody JobPosting jobPosting) {
-        JobPosting updatedJobPosting = jobPostingService.updateJobPosting(id, jobPosting);
-        return ResponseEntity.ok(updatedJobPosting);
+    public CommonResult updateJobPosting(@PathVariable Long id, @RequestBody JobPostingRequestDto jobPostingRequestDto) {
+        JobPosting updatedJobPosting = jobPostingService.updateJobPosting(id, jobPostingRequestDto);
+        return responseService.getSuccessResult();
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteJobPosting(@PathVariable Long id) {
+    public CommonResult deleteJobPosting(@PathVariable Long id) {
         jobPostingService.deleteJobPosting(id);
-        return ResponseEntity.ok("Job posting deleted successfully");
+        return responseService.getSuccessResult();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<JobPosting> getJobPostingById(@PathVariable Long id) {
+    public SingleResult<JobPostingResponseDto> getJobPostingById(@PathVariable Long id) {
         JobPosting jobPosting = jobPostingService.getJobPostingById(id);
-        return ResponseEntity.ok(jobPosting);
+        JobPostingResponseDto jobPostingResponseDto = JobPostingResponseDto.toDto(jobPosting);
+        return responseService.getSingleResult(jobPostingResponseDto);
     }
 
     @GetMapping
-    public ResponseEntity<List<JobPosting>> getAllJobPostings() {
+    public ListResult<JobPostingResponseDto> getAllJobPostings() {
         List<JobPosting> jobPostings = jobPostingService.getAllJobPostings();
-        return ResponseEntity.ok(jobPostings);
+        List<JobPostingResponseDto> jobPostingResponseDtoList = jobPostings.stream().map(JobPostingResponseDto::toDto).collect(Collectors.toList());
+        return responseService.getListResult(jobPostingResponseDtoList);
     }
 }

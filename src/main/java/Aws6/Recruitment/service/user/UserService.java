@@ -1,6 +1,7 @@
 package Aws6.Recruitment.service.user;
 
 
+import Aws6.Recruitment.api.dto.user.UserRequestDto;
 import Aws6.Recruitment.entity.user.Role;
 import Aws6.Recruitment.entity.user.User;
 import Aws6.Recruitment.repository.user.UserRepository;
@@ -17,12 +18,17 @@ public class UserService {
     private final UserRepository userRepository;
 //    private final PasswordEncoder passwordEncoder;
 
-    public User registerUser(User user) {
-        if (userRepository.existsByUsername(user.getUsername()) || userRepository.existsByEmail(user.getEmail())) {
+    public User registerUser(UserRequestDto userRequestDto) {
+        if (userRepository.existsByUsername(userRequestDto.getUsername()) || userRepository.existsByEmail(userRequestDto.getEmail())) {
             throw new RuntimeException("Username or Email already exists");
         }
-        user.setPassword(user.getPassword());
-        user.setRole(Role.USER);;
+
+        User user = User.builder().username(userRequestDto.getUsername())
+                .password(userRequestDto.getPassword())
+                .email(userRequestDto.getEmail())
+                .role(Role.USER)
+                .build();
+
         return userRepository.save(user);
     }
 

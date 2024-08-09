@@ -1,13 +1,20 @@
 package Aws6.Recruitment.api.controller.resume;
 
+import Aws6.Recruitment.api.dto.jobposting.JobPostingResponseDto;
 import Aws6.Recruitment.api.dto.resume.ResumeRequestDto;
+import Aws6.Recruitment.api.dto.resume.ResumeResponseDto;
+import Aws6.Recruitment.entity.response.CommonResult;
+import Aws6.Recruitment.entity.response.ListResult;
+import Aws6.Recruitment.entity.response.SingleResult;
 import Aws6.Recruitment.entity.resume.Resume;
+import Aws6.Recruitment.service.response.ResponseService;
 import Aws6.Recruitment.service.resume.ResumeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/resumes")
@@ -16,33 +23,37 @@ public class ResumeController {
 
     private final ResumeService resumeService;
 
+    private final ResponseService responseService;
+
     @PostMapping
-    public ResponseEntity<Resume> createResume(@RequestBody ResumeRequestDto resumeRequestDto) {
-        Resume createdResume = resumeService.createResume(resumeRequestDto);
-        return ResponseEntity.ok(createdResume);
+    public CommonResult createResume(@RequestBody ResumeRequestDto resumeRequestDto) {
+        resumeService.createResume(resumeRequestDto);
+        return responseService.getSuccessResult();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Resume> updateResume(@PathVariable("id") Long id, @RequestBody Resume resume) {
-        Resume updatedResume = resumeService.updateResume(id, resume);
-        return ResponseEntity.ok(updatedResume);
+    public CommonResult updateResume(@PathVariable("id") Long id, @RequestBody ResumeRequestDto resumeRequestDto) {
+        resumeService.updateResume(id,resumeRequestDto);
+        return responseService.getSuccessResult();
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteResume(@PathVariable("id") Long id) {
+    public CommonResult deleteResume(@PathVariable("id") Long id) {
         resumeService.deleteResume(id);
-        return ResponseEntity.ok("Resume deleted successfully");
+        return responseService.getSuccessResult();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Resume> getResumeById(@PathVariable("id") Long id) {
+    public SingleResult<ResumeResponseDto> getResumeById(@PathVariable("id") Long id) {
         Resume resume = resumeService.getResumeById(id);
-        return ResponseEntity.ok(resume);
+        ResumeResponseDto resumeResponseDto = ResumeResponseDto.toDto(resume);
+        return responseService.getSingleResult(resumeResponseDto);
     }
 
     @GetMapping
-    public ResponseEntity<List<Resume>> getAllResumes() {
+    public ListResult<ResumeResponseDto> getAllResumes() {
         List<Resume> resumes = resumeService.getAllResumes();
-        return ResponseEntity.ok(resumes);
+        List<ResumeResponseDto> resumeResponseDtoList = resumes.stream().map(ResumeResponseDto::toDto).collect(Collectors.toList());
+        return responseService.getListResult(resumeResponseDtoList);
     }
 }
