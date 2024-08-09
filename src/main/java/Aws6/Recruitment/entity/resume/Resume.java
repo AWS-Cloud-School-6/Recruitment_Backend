@@ -47,9 +47,6 @@ public class Resume {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
-    @ManyToOne(fetch = FetchType.LAZY)  // 연관관계 설정
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;  // 이력서와 사용자 간의 연관관계
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
@@ -70,7 +67,6 @@ public class Resume {
         this.education = education;
         this.experience = experience;
         this.skills = skills;
-        this.user = user;
     }
 }
 

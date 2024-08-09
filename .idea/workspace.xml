@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c35623e-6995-4b34-96c4-0688321c9516" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/application/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/application/ApplicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/dto/application/ApplicationRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/dto/application/ApplicationRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/resume/Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/resume/Resume.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/resume/ResumeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/resume/ResumeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723135063026</updated>
       <workItem from="1723135064570" duration="1157000" />
-      <workItem from="1723162231768" duration="6502000" />
+      <workItem from="1723162231768" duration="6877000" />
     </task>
     <servers />
   </component>
