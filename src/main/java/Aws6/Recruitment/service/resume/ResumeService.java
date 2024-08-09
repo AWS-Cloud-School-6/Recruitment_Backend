@@ -21,7 +21,7 @@ public class ResumeService {
 //    @PreAuthorize("hasRole('USER')")
     public Resume createResume(ResumeRequestDto resumeRequestDto) {
 
-        User user = userRepository.findByUserId(resumeRequestDto.getUserId())
+        User user = userRepository.findById(resumeRequestDto.getUserId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
         Resume resume = Resume.builder()

@@ -21,17 +21,19 @@ public class User {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
-        @Column(nullable = false, unique = true)
-        private String email;
+        @Column(nullable = false)
+        private String username;
 
         @Column(nullable = false)
         private String password;
 
+        @Column(nullable = false, unique = true)
+        private String email;
+
         @Column(nullable = false)
-        private String role;
+        private Role role;
 
         @OneToMany(mappedBy = "user")  // 이력서와의 연관관계 설정
         private Set<Resume> resumes;  // 사용자가 가진 이력서들
-
 
 }
