@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c35623e-6995-4b34-96c4-0688321c9516" name="Changes" comment="" />
+    <list default="true" id="6c35623e-6995-4b34-96c4-0688321c9516" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Recruitment.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Recruitment.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/manage-applications.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/manage-applications.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/manage-users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/manage-users.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,6 +121,7 @@
       <workItem from="1723135064570" duration="1157000" />
       <workItem from="1723162231768" duration="6877000" />
       <workItem from="1723170341558" duration="1713000" />
+      <workItem from="1723173520443" duration="647000" />
     </task>
     <servers />
   </component>

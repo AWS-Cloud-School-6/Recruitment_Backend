@@ -9,6 +9,7 @@ import Aws6.Recruitment.service.application.ApplicationService;
 import Aws6.Recruitment.service.jobposting.JobPostingService;
 import Aws6.Recruitment.service.notification.NotificationService;
 import Aws6.Recruitment.service.resume.ResumeService;
+import Aws6.Recruitment.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 //import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -24,7 +25,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AdminController {
 
-//    private final UserService userService;
+    private final UserService userService;
     private final JobPostingService jobPostingService;
     private final ApplicationService applicationService;
     private final ResumeService resumeService;
@@ -36,12 +37,12 @@ public class AdminController {
         return "admin/dashboard";
     }
 //
-//    @GetMapping("/users")
-//    public String manageUsers(Model model) {
-//        List<User> users = userService.getAllUsers();
-//        model.addAttribute("users", users);
-//        return "admin/manage-users";
-//    }
+    @GetMapping("/users")
+    public String manageUsers(Model model) {
+        List<User> users = userService.getAllUsers();
+        model.addAttribute("users", users);
+        return "admin/manage-users";
+    }
 
     @GetMapping("/job-postings")
     public String manageJobPostings(Model model) {
