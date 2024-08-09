@@ -1,10 +1,8 @@
 package Aws6.Recruitment.api.dto.resume;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class ResumeRequestDto {
     private String name;
     private String email;

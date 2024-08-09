@@ -8,6 +8,7 @@ import Aws6.Recruitment.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -31,14 +32,12 @@ public class ResumeService {
                 .experience(resumeRequestDto.getExperience())
                 .skills(resumeRequestDto.getSkills())
                 .build();
-//        Set<Resume> resumes = user.getResumes();
-//        resumes.add(resume);
 
         return resumeRepository.save(resume);
     }
 
 //    @PreAuthorize("hasRole('USER')")
-    public Resume updateResume(Long id, Resume updatedResume) {
+    public Resume updateResume(Long id, ResumeRequestDto updatedResume) {
         Resume existingResume = resumeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Resume not found"));
 
@@ -50,6 +49,7 @@ public class ResumeService {
                 .education(updatedResume.getEducation())
                 .experience(updatedResume.getExperience())
                 .skills(updatedResume.getSkills())
+                .updatedAt(LocalDateTime.now())
                 .build();
 
 
