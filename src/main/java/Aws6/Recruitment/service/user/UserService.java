@@ -5,7 +5,6 @@ import Aws6.Recruitment.entity.user.Role;
 import Aws6.Recruitment.entity.user.User;
 import Aws6.Recruitment.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,13 +12,13 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
+//    private final PasswordEncoder passwordEncoder;
 
     public User registerUser(User user) {
         if (userRepository.existsByUsername(user.getUsername()) || userRepository.existsByEmail(user.getEmail())) {
             throw new RuntimeException("Username or Email already exists");
         }
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(user.getPassword());
         user.setRole(Role.USER);
         return userRepository.save(user);
     }
