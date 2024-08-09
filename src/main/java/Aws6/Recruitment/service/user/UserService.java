@@ -7,6 +7,8 @@ import Aws6.Recruitment.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class UserService {
@@ -26,5 +28,11 @@ public class UserService {
     public User findByUsername(String username) {
         return userRepository.findByUsername(username).orElseThrow(() -> new RuntimeException("User not found"));
     }
+
+    public Optional<User> findById(Long id) {
+        return userRepository.findById(id);
+    }
+
+
 
 }

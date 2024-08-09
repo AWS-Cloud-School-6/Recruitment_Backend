@@ -12,7 +12,9 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByUsername(String username);
+
     boolean existsByUsername(String username);
+
     boolean existsByEmail(String email);
 
     @Query("SELECT u FROM User u WHERE " +
@@ -22,6 +24,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
     List<User> searchUsers(@Param("name") String name,
                            @Param("email") String email,
                            @Param("role") String role);
-
-//    Optional<User> findById(Long userId);
 }

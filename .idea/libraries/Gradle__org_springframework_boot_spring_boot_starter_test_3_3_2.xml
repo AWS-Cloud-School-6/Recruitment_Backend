@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: org.springframework.boot:spring-boot-starter-test:3.3.2">
+  <library name="Gradle: org.springframework.boot:spring-boot-starter-test:3.3.2" external-system-id="GRADLE">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-test/3.3.2/7b4eb23bcd42b088b8a03088ff8e54c194f34240/spring-boot-starter-test-3.3.2.jar!/" />
     </CLASSES>

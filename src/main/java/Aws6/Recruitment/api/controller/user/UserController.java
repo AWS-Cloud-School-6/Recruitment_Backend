@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
@@ -20,10 +22,16 @@ public class UserController {
         return ResponseEntity.ok("User registered successfully");
     }
 
-    @GetMapping("/{username}")
-    public ResponseEntity<User> getUser(@PathVariable("username") String username) {
-//        System.out.println(username);
-        User user = userService.findByUsername(username);
+//    @GetMapping("/{username}")
+//    public ResponseEntity<User> getUser(@PathVariable("username") String username) {
+////        System.out.println(username);
+//        User user = userService.findByUsername(username);
+//        return ResponseEntity.ok(user);
+//    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Optional<User>> getUserId(@PathVariable("id") Long id) {
+        Optional<User> user = userService.findById(id);
         return ResponseEntity.ok(user);
     }
 }
