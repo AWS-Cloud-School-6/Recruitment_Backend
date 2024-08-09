@@ -1,5 +1,6 @@
 package Aws6.Recruitment.api.controller.user;
 
+import Aws6.Recruitment.api.dto.user.UserRequestDto;
 import Aws6.Recruitment.api.dto.user.UserResponseDto;
 import Aws6.Recruitment.entity.response.CommonResult;
 import Aws6.Recruitment.entity.response.SingleResult;
@@ -23,8 +24,8 @@ public class UserController {
 
 
     @PostMapping
-    public CommonResult registerUser(@RequestBody User user) {
-        userService.registerUser(user);
+    public CommonResult registerUser(@RequestBody UserRequestDto userRequestDto) {
+        userService.registerUser(userRequestDto);
         return responseService.getSuccessResult();
     }
 

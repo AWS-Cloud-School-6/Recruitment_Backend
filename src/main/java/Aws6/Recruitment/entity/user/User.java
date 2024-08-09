@@ -2,6 +2,7 @@ package Aws6.Recruitment.entity.user;
 
 import Aws6.Recruitment.entity.resume.Resume;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -36,4 +37,12 @@ public class User {
 //        @OneToMany(mappedBy = "user")  // 이력서와의 연관관계 설정
 //        private Set<Resume> resumes;  // 사용자가 가진 이력서들
 
+
+        @Builder
+        public User(String username, String password, String email, Role role) {
+                this.username = username;
+                this.password = password;
+                this.email = email;
+                this.role = role;
+        }
 }
