@@ -6,9 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ResumeRequestDto {
-
-    private Long userId;  // 사용자 ID
-
     private String name;
     private String email;
     private String phone;
@@ -16,4 +13,5 @@ public class ResumeRequestDto {
     private String education;
     private String experience;
     private String skills;
+    private Long userId;  // 사용자 ID
 }
