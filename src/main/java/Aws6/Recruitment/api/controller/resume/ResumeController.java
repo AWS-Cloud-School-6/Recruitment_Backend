@@ -1,5 +1,6 @@
 package Aws6.Recruitment.api.controller.resume;
 
+import Aws6.Recruitment.api.dto.resume.ResumeRequestDto;
 import Aws6.Recruitment.entity.resume.Resume;
 import Aws6.Recruitment.service.resume.ResumeService;
 import lombok.RequiredArgsConstructor;
@@ -16,8 +17,8 @@ public class ResumeController {
     private final ResumeService resumeService;
 
     @PostMapping
-    public ResponseEntity<Resume> createResume(@RequestBody Resume resume) {
-        Resume createdResume = resumeService.createResume(resume);
+    public ResponseEntity<Resume> createResume(@RequestBody ResumeRequestDto resumeRequestDto) {
+        Resume createdResume = resumeService.createResume(resumeRequestDto);
         return ResponseEntity.ok(createdResume);
     }
 

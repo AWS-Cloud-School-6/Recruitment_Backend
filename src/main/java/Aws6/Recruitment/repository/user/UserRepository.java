@@ -22,4 +22,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     List<User> searchUsers(@Param("name") String name,
                            @Param("email") String email,
                            @Param("role") String role);
+
+    Optional<User> findByUserId(Long userId);
 }

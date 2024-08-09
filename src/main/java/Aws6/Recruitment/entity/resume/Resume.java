@@ -54,7 +54,7 @@ public class Resume {
     }
 
     @Builder
-    public Resume(String name, String email, String phone, String summary, String education, String experience, String skills) {
+    public Resume(String name, String email, String phone, String summary, String education, String experience, String skills, User user) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -62,8 +62,8 @@ public class Resume {
         this.education = education;
         this.experience = experience;
         this.skills = skills;
+        this.user = user;
     }
-
 }
 
 
