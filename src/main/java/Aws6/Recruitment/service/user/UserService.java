@@ -19,7 +19,7 @@ public class UserService {
             throw new RuntimeException("Username or Email already exists");
         }
         user.setPassword(user.getPassword());
-        user.setRole(Role.USER);
+        user.setRole(Role.USER);;
         return userRepository.save(user);
     }
 

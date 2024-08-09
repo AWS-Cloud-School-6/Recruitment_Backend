@@ -8,4 +8,5 @@ import lombok.Setter;
 public class ApplicationRequestDto {
     private Long userId;
     private Long jobPostingId;
+    private Long resumeId;
 }
