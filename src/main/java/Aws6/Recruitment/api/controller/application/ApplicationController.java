@@ -27,19 +27,19 @@ public class ApplicationController {
     }
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Application>> getApplicationsByUserId(@PathVariable Long userId) {
+    public ResponseEntity<List<Application>> getApplicationsByUserId(@PathVariable("userId") Long userId) {
         List<Application> applications = applicationService.getApplicationsByUserId(userId);
         return ResponseEntity.ok(applications);
     }
 
     @GetMapping("/job/{jobPostingId}")
-    public ResponseEntity<List<Application>> getApplicationsByJobPostingId(@PathVariable Long jobPostingId) {
+    public ResponseEntity<List<Application>> getApplicationsByJobPostingId(@PathVariable("jobPostingId") Long jobPostingId) {
         List<Application> applications = applicationService.getApplicationsByJobPostingId(jobPostingId);
         return ResponseEntity.ok(applications);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Application> getApplicationById(@PathVariable Long id) {
+    public ResponseEntity<Application> getApplicationById(@PathVariable("id") Long id) {
         Application application = applicationService.getApplicationById(id);
         return ResponseEntity.ok(application);
     }
