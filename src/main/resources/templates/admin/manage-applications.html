@@ -21,11 +21,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="application : ${applications}">
-      <td th:text="${application.id}"></td>
-      <td th:text="${application.user.id}"></td>
-      <td th:text="${application.jobPosting.id}"></td>
-      <td th:text="${application.resume.id}"></td>
+    <tr th:each="appli : ${applications}">
+      <td th:text="${appli.id}"></td>
+      <td th:text="${appli.user.id}"></td>
+      <td th:text="${appli.jobPosting.id}"></td>
+      <td th:text="${appli.resume.id}"></td>
     </tr>
     </tbody>
   </table>
