@@ -23,19 +23,19 @@ public class ResumeController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Resume> updateResume(@PathVariable Long id, @RequestBody Resume resume) {
+    public ResponseEntity<Resume> updateResume(@PathVariable("id") Long id, @RequestBody Resume resume) {
         Resume updatedResume = resumeService.updateResume(id, resume);
         return ResponseEntity.ok(updatedResume);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteResume(@PathVariable Long id) {
+    public ResponseEntity<String> deleteResume(@PathVariable("id") Long id) {
         resumeService.deleteResume(id);
         return ResponseEntity.ok("Resume deleted successfully");
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Resume> getResumeById(@PathVariable Long id) {
+    public ResponseEntity<Resume> getResumeById(@PathVariable("id") Long id) {
         Resume resume = resumeService.getResumeById(id);
         return ResponseEntity.ok(resume);
     }

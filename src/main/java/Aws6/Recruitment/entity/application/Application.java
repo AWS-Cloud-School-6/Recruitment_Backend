@@ -35,11 +35,14 @@ public class Application {
     @Column(nullable = false)
     private LocalDateTime appliedAt;
 
+    @PrePersist
+    protected void onCreate() {
+        appliedAt = LocalDateTime.now();
+    }
     @Builder
-    public Application(User user, JobPosting jobPosting, Resume resume, LocalDateTime appliedAt) {
+    public Application(User user, JobPosting jobPosting, Resume resume) {
         this.user = user;
         this.jobPosting = jobPosting;
         this.resume = resume;
-        this.appliedAt = appliedAt;
     }
 }

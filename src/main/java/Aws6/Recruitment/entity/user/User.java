@@ -32,8 +32,8 @@ public class User {
 
         @Column(nullable = false)
         private Role role;
-
-        @OneToMany(mappedBy = "user")  // 이력서와의 연관관계 설정
-        private Set<Resume> resumes;  // 사용자가 가진 이력서들
+//
+//        @OneToMany(mappedBy = "user")  // 이력서와의 연관관계 설정
+//        private Set<Resume> resumes;  // 사용자가 가진 이력서들
 
 }
