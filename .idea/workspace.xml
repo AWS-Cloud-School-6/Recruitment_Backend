@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c35623e-6995-4b34-96c4-0688321c9516" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/resume/ResumeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/resume/ResumeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/resume/Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/resume/Resume.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/application/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/application/ApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/resume/ResumeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/resume/ResumeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723135063026</updated>
       <workItem from="1723135064570" duration="1157000" />
-      <workItem from="1723162231768" duration="3430000" />
+      <workItem from="1723162231768" duration="5926000" />
     </task>
     <servers />
   </component>

@@ -35,7 +35,6 @@ public class ApplicationService {
                 .user(user)
                 .jobPosting(jobPosting)
                 .resume(resume)
-                .appliedAt(null)  // `appliedAt`는 자동으로 설정됨
                 .build();
 
         return applicationRepository.save(application);

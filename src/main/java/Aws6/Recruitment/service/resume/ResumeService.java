@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -24,6 +25,7 @@ public class ResumeService {
         User user = userRepository.findById(resumeRequestDto.getUserId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
+
         Resume resume = Resume.builder()
                 .name(resumeRequestDto.getName())
                 .email(resumeRequestDto.getEmail())
@@ -34,6 +36,8 @@ public class ResumeService {
                 .skills(resumeRequestDto.getSkills())
                 .user(user)
                 .build();
+//        Set<Resume> resumes = user.getResumes();
+//        resumes.add(resume);
 
         return resumeRepository.save(resume);
     }
@@ -64,8 +68,9 @@ public class ResumeService {
 
 //    @PreAuthorize("hasRole('USER')")
     public Resume getResumeById(Long id) {
-        return resumeRepository.findById(id)
+        Resume resume_not_found = resumeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Resume not found"));
+        return resume_not_found;
     }
 
 //    @PreAuthorize("hasRole('ADMIN')")
