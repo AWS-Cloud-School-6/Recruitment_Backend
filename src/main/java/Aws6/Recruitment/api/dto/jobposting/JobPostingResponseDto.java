@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 @Data
 public class JobPostingResponseDto {
 
+
+    private Long jobPostingid;
     private String title;
     private String description;
     private String company;
@@ -17,6 +19,7 @@ public class JobPostingResponseDto {
     private LocalDateTime updatedAt;
 
     public JobPostingResponseDto(JobPosting jobPosting) {
+        this.jobPostingid=jobPosting.getId();
         this.title = jobPosting.getTitle();
         this.description = jobPosting.getDescription();
         this.company = jobPosting.getCompany();
