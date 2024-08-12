@@ -1,5 +1,6 @@
 package Aws6.Recruitment.api.controller.user;
 
+import Aws6.Recruitment.api.dto.user.LoginRequestDto;
 import Aws6.Recruitment.api.dto.user.UserRequestDto;
 import Aws6.Recruitment.api.dto.user.UserResponseDto;
 import Aws6.Recruitment.entity.response.CommonResult;
@@ -28,10 +29,17 @@ public class UserController {
         return responseService.getSuccessResult();
     }
 
-    @GetMapping("/{username}")
-    public SingleResult<UserResponseDto> getUser(@PathVariable("username") String username) {
-        User user = userService.findByUsername(username);
+    @PostMapping("/login")
+    public SingleResult<UserResponseDto> loginUser(@RequestBody LoginRequestDto loginRequestDto) {
+        User user = userService.loginUser(loginRequestDto);
         UserResponseDto userResponseDto = UserResponseDto.toDto(user);
         return responseService.getSingleResult(userResponseDto);
     }
+
+//    @GetMapping("/{username}")
+//    public SingleResult<UserResponseDto> getUser(@PathVariable("username") String username) {
+//        User user = userService.findByUsername(username);
+//        UserResponseDto userResponseDto = UserResponseDto.toDto(user);
+//        return responseService.getSingleResult(userResponseDto);
+//    }
 }
