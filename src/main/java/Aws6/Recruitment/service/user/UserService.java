@@ -1,6 +1,7 @@
 package Aws6.Recruitment.service.user;
 
 
+import Aws6.Recruitment.api.dto.user.LoginRequestDto;
 import Aws6.Recruitment.api.dto.user.UserRequestDto;
 import Aws6.Recruitment.entity.user.Role;
 import Aws6.Recruitment.entity.user.User;
@@ -32,9 +33,23 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public User findByUsername(String username) {
-        return userRepository.findByUsername(username).orElseThrow(() -> new RuntimeException("User not found"));
+    public User loginUser(LoginRequestDto loginRequestDto) {
+        if (!userRepository.existsByEmail(loginRequestDto.getLoginEmail())) {
+            throw new RuntimeException("User not exists");
+        }
+
+        User userByEmail = userRepository.findUserByEmail(loginRequestDto.getLoginEmail());
+
+        if(!userByEmail.getPassword().equals(loginRequestDto.getLoginPw())) {
+            throw new RuntimeException("Password is not correct");
+        }
+
+        return userByEmail;
     }
+
+//    public User findByUsername(String username) {
+//        return userRepository.findByUsername(username).orElseThrow(() -> new RuntimeException("User not found"));
+//    }
 
 
     public List<User> getAllUsers() {
