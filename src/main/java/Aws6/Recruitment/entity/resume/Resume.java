@@ -1,5 +1,6 @@
 package Aws6.Recruitment.entity.resume;
 
+import Aws6.Recruitment.entity.jobposting.JobPosting;
 import Aws6.Recruitment.entity.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
@@ -19,6 +20,14 @@ public class Resume {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "job_posting_id", nullable = false)
+    private JobPosting jobPosting;
 
     @Column(nullable = false)
     private String name;
@@ -59,7 +68,9 @@ public class Resume {
     }
 
     @Builder
-    public Resume(String name, String email, String phone, String summary, String education, String experience, String skills,LocalDateTime updatedAt) {
+    public Resume(JobPosting jobPosting,User user,String name, String email, String phone, String summary, String education, String experience, String skills,LocalDateTime updatedAt) {
+        this.jobPosting=jobPosting;
+        this.user=user;
         this.name = name;
         this.email = email;
         this.phone = phone;
