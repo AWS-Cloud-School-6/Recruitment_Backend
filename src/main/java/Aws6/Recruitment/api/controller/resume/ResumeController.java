@@ -47,12 +47,12 @@ public class ResumeController {
         return responseService.getSuccessResult();
     }
 
-    @GetMapping("/{id}")
-    public SingleResult<ResumeResponseDto> getResumeById(@PathVariable("id") Long id) {
-        Resume resume = resumeService.getResumeById(id);
-        ResumeResponseDto resumeResponseDto = ResumeResponseDto.toDto(resume);
-        return responseService.getSingleResult(resumeResponseDto);
-    }
+//    @GetMapping("/{id}")
+//    public SingleResult<ResumeResponseDto> getResumeById(@PathVariable("id") Long id) {
+//        Resume resume = resumeService.getResumeById(id);
+//        ResumeResponseDto resumeResponseDto = ResumeResponseDto.toDto(resume);
+//        return responseService.getSingleResult(resumeResponseDto);
+//    }
 
     @GetMapping
     public ListResult<ResumeResponseDto> getAllResumes() {
