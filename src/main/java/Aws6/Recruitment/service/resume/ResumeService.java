@@ -1,8 +1,10 @@
 package Aws6.Recruitment.service.resume;
 
 import Aws6.Recruitment.api.dto.resume.ResumeRequestDto;
+import Aws6.Recruitment.entity.jobposting.JobPosting;
 import Aws6.Recruitment.entity.resume.Resume;
 import Aws6.Recruitment.entity.user.User;
+import Aws6.Recruitment.repository.jobposting.JobPostingRepository;
 import Aws6.Recruitment.repository.resume.ResumeRepository;
 import Aws6.Recruitment.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -17,13 +20,19 @@ import java.util.Set;
 public class ResumeService {
 
     private final ResumeRepository resumeRepository;
-
     private final UserRepository userRepository;
+    
+    private final JobPostingRepository jobPostingRepository;
 
 //    @PreAuthorize("hasRole('USER')")
     public Resume createResume(ResumeRequestDto resumeRequestDto) {
 
+        Optional<JobPosting> tempJobPosting = jobPostingRepository.findById(resumeRequestDto.getJobPostingId());
+        Optional<User> tempUser = userRepository.findById(resumeRequestDto.getUserId());
+
         Resume resume = Resume.builder()
+                .jobPosting(tempJobPosting.get())
+                .user(tempUser.get())
                 .name(resumeRequestDto.getName())
                 .email(resumeRequestDto.getEmail())
                 .phone(resumeRequestDto.getPhone())
