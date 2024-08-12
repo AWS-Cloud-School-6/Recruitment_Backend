@@ -21,18 +21,23 @@ public class ResumeService {
 
     private final ResumeRepository resumeRepository;
     private final UserRepository userRepository;
-    
     private final JobPostingRepository jobPostingRepository;
 
 //    @PreAuthorize("hasRole('USER')")
     public Resume createResume(ResumeRequestDto resumeRequestDto) {
 
-        Optional<JobPosting> tempJobPosting = jobPostingRepository.findById(resumeRequestDto.getJobPostingId());
-        Optional<User> tempUser = userRepository.findById(resumeRequestDto.getUserId());
+        System.out.println(resumeRequestDto.getJobPostingId());
+        System.out.println(resumeRequestDto.getUserId());
+
+        JobPosting jobPosting = jobPostingRepository.findJobPostingById(resumeRequestDto.getJobPostingId());
+        User user = userRepository.findUserById(resumeRequestDto.getUserId());
+
+        System.out.println(jobPosting.getCompany());
+        System.out.println(user.getUsername());
 
         Resume resume = Resume.builder()
-                .jobPosting(tempJobPosting.get())
-                .user(tempUser.get())
+                .jobPosting(jobPosting)
+                .user(user)
                 .name(resumeRequestDto.getName())
                 .email(resumeRequestDto.getEmail())
                 .phone(resumeRequestDto.getPhone())
