@@ -7,8 +7,10 @@ import Aws6.Recruitment.entity.response.CommonResult;
 import Aws6.Recruitment.entity.response.ListResult;
 import Aws6.Recruitment.entity.response.SingleResult;
 import Aws6.Recruitment.entity.resume.Resume;
+import Aws6.Recruitment.entity.user.User;
 import Aws6.Recruitment.service.response.ResponseService;
 import Aws6.Recruitment.service.resume.ResumeService;
+import Aws6.Recruitment.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +26,8 @@ public class ResumeController {
     private final ResumeService resumeService;
 
     private final ResponseService responseService;
+
+    private final UserService userService;
 
     @PostMapping
     public CommonResult createResume(@RequestBody ResumeRequestDto resumeRequestDto) {
@@ -54,6 +58,14 @@ public class ResumeController {
     public ListResult<ResumeResponseDto> getAllResumes() {
         List<Resume> resumes = resumeService.getAllResumes();
         List<ResumeResponseDto> resumeResponseDtoList = resumes.stream().map(ResumeResponseDto::toDto).collect(Collectors.toList());
+        return responseService.getListResult(resumeResponseDtoList);
+    }
+
+    @GetMapping("/{userId}")
+    public ListResult<ResumeResponseDto> getAllResumesByUser(@PathVariable("userId") Long id) {
+        User user = userService.getUser(id);
+        List<Resume> allResumesByUser = resumeService.getAllResumesByUser(user);
+        List<ResumeResponseDto> resumeResponseDtoList = allResumesByUser.stream().map(ResumeResponseDto::toDto).collect(Collectors.toList());
         return responseService.getListResult(resumeResponseDtoList);
     }
 }

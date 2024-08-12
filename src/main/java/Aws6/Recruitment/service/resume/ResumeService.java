@@ -86,4 +86,8 @@ public class ResumeService {
     public List<Resume> getAllResumes() {
         return resumeRepository.findAll();
     }
+
+    public List<Resume> getAllResumesByUser(User user) {
+        return resumeRepository.findResumesByUser(user);
+    }
 }
