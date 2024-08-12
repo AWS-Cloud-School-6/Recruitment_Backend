@@ -9,6 +9,9 @@ import java.time.LocalDateTime;
 @Data
 public class ResumeResponseDto {
 
+    private Long jobPostingId;
+    private Long userId;
+
     private String name;
     private String email;
     private String phone;
@@ -20,6 +23,8 @@ public class ResumeResponseDto {
     private LocalDateTime updatedAt;
 
     public ResumeResponseDto(Resume resume) {
+        this.jobPostingId=resume.getJobPosting().getId();
+        this.userId=resume.getUser().getId();
         this.name = resume.getName();
         this.email = resume.getEmail();
         this.phone = resume.getPhone();
