@@ -4,6 +4,9 @@ import lombok.Data;
 
 @Data
 public class ResumeRequestDto {
+
+    private Long jobPostingId;
+    private Long userId;
     private String name;
     private String email;
     private String phone;
