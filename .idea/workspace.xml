@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c35623e-6995-4b34-96c4-0688321c9516" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mysql_mysql_connector_j_8_3_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_h2database_h2_2_2_224.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Recruitment.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Recruitment.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Recruitment.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Recruitment.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/admin/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/admin/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/application/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/application/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/notification/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/notification/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/dto/application/ApplicationResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/dto/application/ApplicationResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/notification/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/entity/notification/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/repository/application/ApplicationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/repository/application/ApplicationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/repository/notification/NotificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/repository/notification/NotificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/application/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/application/ApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/notification/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/notification/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +195,7 @@
       <workItem from="1723173520443" duration="647000" />
       <workItem from="1723443593679" duration="1289000" />
       <workItem from="1723446581735" duration="1680000" />
-      <workItem from="1723460159926" duration="680000" />
+      <workItem from="1723460159926" duration="2033000" />
     </task>
     <servers />
   </component>
