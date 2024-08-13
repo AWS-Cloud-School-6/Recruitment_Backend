@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c35623e-6995-4b34-96c4-0688321c9516" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/jobposting/JobPostingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/jobposting/JobPostingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/resume/ResumeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/resume/ResumeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/api/controller/user/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Aws6/Recruitment/service/message/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +181,8 @@
       <workItem from="1723443593679" duration="1289000" />
       <workItem from="1723446581735" duration="1680000" />
       <workItem from="1723460159926" duration="2033000" />
+      <workItem from="1723563657413" duration="322000" />
+      <workItem from="1723563989894" duration="106000" />
     </task>
     <servers />
   </component>
