@@ -1,6 +1,8 @@
 package Aws6.Recruitment.service.message;
 
 import Aws6.Recruitment.api.dto.message.MessageDto;
+import Aws6.Recruitment.api.dto.resume.ResumeRequestDto;
+import Aws6.Recruitment.service.resume.ResumeService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -21,14 +23,15 @@ public class MessageService {
 
     private final RabbitTemplate rabbitTemplate;
 
+    private final ResumeService resumeService;
     /**
      * Queue로 메시지를 발행
      *
      * @param messageDto 발행할 메시지의 DTO 객체
      */
-    public void sendMessage(MessageDto messageDto) {
-        log.info("message sent: {}", messageDto.toString());
-        rabbitTemplate.convertAndSend(exchangeName, routingKey, messageDto);
+    public void sendMessage(ResumeRequestDto resumeRequestDto) {
+        log.info("message sent: {}", resumeRequestDto.toString());
+        rabbitTemplate.convertAndSend(exchangeName, routingKey, resumeRequestDto);
     }
 
     /**
@@ -37,7 +40,8 @@ public class MessageService {
      * @param messageDto 구독한 메시지를 담고 있는 MessageDto 객체
      */
     @RabbitListener(queues = "${rabbitmq.queue.name}")
-    public void reciveMessage(MessageDto messageDto) {
-        log.info("Received message: {}", messageDto.toString());
+    public void reciveMessage(ResumeRequestDto resumeRequestDto) {
+        log.info("Received message: {}", resumeRequestDto.toString());
+        resumeService.createResume(resumeRequestDto);
     }
 }

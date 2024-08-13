@@ -8,16 +8,21 @@ import Aws6.Recruitment.entity.response.ListResult;
 import Aws6.Recruitment.entity.response.SingleResult;
 import Aws6.Recruitment.entity.resume.Resume;
 import Aws6.Recruitment.entity.user.User;
+import Aws6.Recruitment.service.message.MessageService;
 import Aws6.Recruitment.service.response.ResponseService;
 import Aws6.Recruitment.service.resume.ResumeService;
 import Aws6.Recruitment.service.user.UserService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/resumes")
 @RequiredArgsConstructor
@@ -29,9 +34,10 @@ public class ResumeController {
 
     private final UserService userService;
 
+    private final MessageService messageService;
     @PostMapping
     public CommonResult createResume(@RequestBody ResumeRequestDto resumeRequestDto) {
-        resumeService.createResume(resumeRequestDto);
+        messageService.sendMessage(resumeRequestDto);
         return responseService.getSuccessResult();
     }
 

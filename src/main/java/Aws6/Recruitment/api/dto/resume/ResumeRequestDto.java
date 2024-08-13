@@ -1,8 +1,10 @@
 package Aws6.Recruitment.api.dto.resume;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 public class ResumeRequestDto {
 
     private Long jobPostingId;
