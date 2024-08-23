@@ -1,18 +1,20 @@
 # Recruitment_Backend
 AWS Cloud School 6기 3팀 미니 프로젝트 recruitment 사이트 Backend 팀 입니다.
-대규모 트래픽 발생시 어떠한 Architecutre 를 구성해야 보다 원활한 Service 가 될지 고민하다 설정하게된 프로젝트 입니다.
-K8S 환경으로 Service 를 배포했고 Front 는 React , Back 은 SpringBoot , DB 는 Cloud SQL 으로 Mysql 을 사용했습니다.
+
+<img width="1153" alt="스크린샷 2024-08-23 오후 2 13 12" src="https://github.com/user-attachments/assets/3591610b-1e09-415e-88fc-7972216fb173">
+
+이 화면을 보는데 1시간이 넘게 걸렸던 경험이 있습니다. 자동으로 어떤 Instance 를 사용했는지 Auto Scaling 은 사용했는지? 사용했다면 Metric은 뭔지 등등 의 의문이 자연스럽게 들었고 그 경험을 토대로 진행한 프로젝트 입니다. 대규모 트래픽 발생시 어떠한 Architecutre 를 구성해야 보다 원활한 Service 가 될지 고민하다 설정하게된 프로젝트 입니다. K8S 환경으로 Service 를 배포했고 Front 는 React , Back 은 SpringBoot , DB 는 Cloud SQL 으로 Mysql 을 사용했습니다.
 
 
 ----
 
 
-- [Architecture](#Architecture)
+- [Architecture]
    - [3 Tier Architecture](#3-Tier-Architecutre)
    - [+ HPA](#+HPA)
    - [+ Messeage Queue](#+Messeage-Queue)
    - [Architecture Test](#최종-비교)
-- [배운점 + 해결한점](#Test)
+- [배운점 + 해결한점]
    - [기존 문제](#문제발생)
    - [임시 해결](#임시해결)
    - [최종 해결](#최종해결)
