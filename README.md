@@ -9,11 +9,13 @@ K8S 환경으로 Service 를 배포했고 Front 는 React , Back 은 SpringBoot 
 
 - [Architecture](#Architecture)
    - [3 Tier Architecture](#3-Tier-Architecutre)
-   - [+ HPA](## +HPA)
-   - [+ Messeage Queue](## +Messeage Queue)
-   - [Architecture Test](## 최종-비교)
+   - [+ HPA](#+HPA)
+   - [+ Messeage Queue](#+Messeage-Queue)
+   - [Architecture Test](#최종-비교)
 - [배운점 + 해결한점](#Test)
-
+   - [기존 문제](#문제발생)
+   - [임시 해결](#임시해결)
+   - [최종 해결](#최종해결)
 
 ----
 
@@ -56,7 +58,7 @@ Front,Back 각각 한개의 POD 만 작성해서 Test 한 결과 입니다.
 <img width="1032" alt="스크린샷 2024-08-23 오후 1 55 59" src="https://github.com/user-attachments/assets/e86547bb-7926-410f-ae73-adf7668c7fe9">
 
 
-## +Messeage Queue
+## +Messeage-Queue
 
 <img width="1208" alt="스크린샷 2024-08-23 오후 1 54 36" src="https://github.com/user-attachments/assets/5ca924b3-2e20-46c7-93a6-15f705391816">
 
@@ -76,5 +78,11 @@ Front,Back 각각 한개의 POD 만 작성해서 Test 한 결과 입니다.
 
 
 # Test
+
+## 문제발생
+
+## 임시해결
+
+## 최종해결
 
 
