@@ -83,8 +83,27 @@ Front,Back 각각 한개의 POD 만 작성해서 Test 한 결과 입니다.
 
 ## 문제발생
 
+Front 와 Back 사이에 내부 ALB를 두어서 Back 쪽의 로직들은 외부로 부터 숨기려고 했었습니다. 하지만 Front 측에서 RestAPI 통신시 내부에 있는 ALB 주소를 찾아가지 못하는 문제가 발생했습니다.
+
+(사진)
+
 ## 임시해결
 
+내부 ALB 를 외부 ALB로 변경해주면서 임시적인 해결을 할수 있었습니다.
+
+(사진)
+
+이런 방식으로 외부 ALB를 두개 사용하는 경우 굳이 두개를 사용할 필요가 없었습니다.
+그래서 ALB 한개에 Front,Back 을 각각 URL Mapping 으로 해주었습니다.
+
+
 ## 최종해결
+
+이러한 문제들을 해결하기 위해 최종적으로는 AWS API Gateway를 사용해서 해결했습니다.
+
+(사진)
+
+API Gateway 를 배포하여 외부 노출해주었고 API Gateway 는 VPC LInk 를 통해 들어온 이후 내부에 연결된 NLB 로 연결이 되게 해주었습니다.
+이러한 방식을 통해서 Private Subnet 안에 있는 Instance 에 접근할수 있게 됩니다.
 
 
