@@ -7,13 +7,12 @@ K8S 환경으로 Service 를 배포했고 Front 는 React , Back 은 SpringBoot 
 ----
 
 
-
 - [Architecture](#Architecture)
-   - 3 Tier Architecture(##-3-Tier-Architecutre)
-   - + HPA(## + HPA)
-   - + Messeage Queue(## + Messeage Queue)
-   - Architecture Test(## 최종-비교)
-- [Test](#Test)
+   - [3 Tier Architecture](#3-Tier-Architecutre)
+   - [+ HPA](## +HPA)
+   - [+ Messeage Queue](## +Messeage Queue)
+   - [Architecture Test](## 최종-비교)
+- [배운점 + 해결한점](#Test)
 
 
 ----
@@ -23,7 +22,7 @@ K8S 환경으로 Service 를 배포했고 Front 는 React , Back 은 SpringBoot 
 
 간단한 3-Tier , HPA , RabbitMQ 순으로 3가지의 Architecture 로 나누어서 설계를 하였습니다.
 
-## 3 Tier-Architecutre
+## 3-Tier-Architecutre
 
 <img width="1173" alt="스크린샷 2024-08-23 오후 1 47 22" src="https://github.com/user-attachments/assets/f58ef3f2-d059-469e-bcc7-08dbc238ed22">
 
@@ -38,7 +37,7 @@ K8S 환경으로 Service 를 배포했고 Front 는 React , Back 은 SpringBoot 
 
 Front,Back 각각 한개의 POD 만 작성해서 Test 한 결과 입니다.
 
-## + HPA
+## +HPA
 
 <img width="1179" alt="스크린샷 2024-08-23 오후 1 51 43" src="https://github.com/user-attachments/assets/df9a03cf-e92a-43f8-bc0a-82bf3fa373cc">
 
@@ -57,7 +56,7 @@ Front,Back 각각 한개의 POD 만 작성해서 Test 한 결과 입니다.
 <img width="1032" alt="스크린샷 2024-08-23 오후 1 55 59" src="https://github.com/user-attachments/assets/e86547bb-7926-410f-ae73-adf7668c7fe9">
 
 
-## + Messeage Queue
+## +Messeage Queue
 
 <img width="1208" alt="스크린샷 2024-08-23 오후 1 54 36" src="https://github.com/user-attachments/assets/5ca924b3-2e20-46c7-93a6-15f705391816">
 
