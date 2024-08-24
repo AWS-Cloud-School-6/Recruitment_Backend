@@ -3,9 +3,62 @@ AWS Cloud School 6기 3팀 미니 프로젝트 recruitment 사이트 Backend 팀
 
 <img width="1153" alt="스크린샷 2024-08-23 오후 2 13 12" src="https://github.com/user-attachments/assets/3591610b-1e09-415e-88fc-7972216fb173">
 
-이 화면을 보는데 1시간이 넘게 걸렸던 경험이 있습니다. 자동으로 어떤 Instance 를 사용했는지 Auto Scaling 은 사용했는지? 사용했다면 Metric은 뭔지 등등 의 의문이 자연스럽게 들었고 그 경험을 토대로 진행한 프로젝트 입니다. 대규모 트래픽 발생시 어떠한 Architecutre 를 구성해야 보다 원활한 Service 가 될지 고민하다 설정하게된 프로젝트 입니다. K8S 환경으로 Service 를 배포했고 Front 는 React , Back 은 SpringBoot , DB 는 Cloud SQL 으로 Mysql 을 사용했습니다.
+<br>
+대규모 트래픽 발생시 어떠한 Architecutre 를 구성해야 보다 원활한 Service 가 될지 고민하다 설정하게된 프로젝트 입니다.
+<br>
+<br>
+
+이 화면을 보는데 1시간이 넘게 걸렸던 경험이 있습니다. 자동으로 어떤 Instance 를 사용했는지 Auto Scaling 은 사용했는지? 사용했다면 Metric은 뭔지 등등 의 의문이 자연스럽게 들었고 그 경험을 토대로 진행한 프로젝트 입니다. 
+
+---
 
 
+<div align=center><h1>STACKS</h1></div>
+
+<div align=center> 
+   <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+  <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
+  <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
+  <br>
+  
+  <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> 
+   <img src="https://img.shields.io/badge/spring security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white"> 
+   
+  <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> 
+ <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
+
+  <br>
+  <br>
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=Amazon Web Services&logoColor=white"> 
+  <br>
+  
+  <img src="https://img.shields.io/badge/AWS Organizations-E7157B?style=for-the-badge&logo=AWS Organizations&logoColor=white"> 
+   <img src="https://img.shields.io/badge/AWS Elastic Load Balancing-8C4FFF?style=for-the-badge&logo=AWS Elastic Load Balancing&logoColor=white"> 
+   <br>
+   <img src="https://img.shields.io/badge/AWS RDS-527FFF?style=for-the-badge&logo=Amazon RDS&logoColor=white"> 
+   <img src="https://img.shields.io/badge/AWS API Gateway-FF4F8B?style=for-the-badge&logo=Amazon API Gateway&logoColor=white"> 
+   <img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=for-the-badge&logo=Amazon EC2&logoColor=white"> 
+
+<br>
+<br>
+   <img src="https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=Google Cloud&logoColor=white"> 
+<br>
+   <img src="https://img.shields.io/badge/Virtual Machine-4285F4?style=for-the-badge&logo=Google&logoColor=white"> 
+   <img src="https://img.shields.io/badge/Google Kubernetes Engine-FF9900?style=for-the-badge&logo=Amazon EKS&logoColor=white"> 
+   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white">
+   <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white">
+<br>
+<br> 
+   
+
+  
+  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+   <img src="https://img.shields.io/badge/Docker Hub-2496ED?style=for-the-badge&logo=Docker&logoColor=white">
+   <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white">
+   <img src="https://img.shields.io/badge/Apache JMeter-D22128?style=for-the-badge&logo=Apache JMeter&logoColor=white">
+  <br>
+</div>
 ----
 
 
