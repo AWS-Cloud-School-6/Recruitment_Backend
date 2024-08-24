@@ -75,6 +75,10 @@ AWS Cloud School 6기 3팀 미니 프로젝트 recruitment 사이트 Backend 팀
 ----
 
 
+----
+<br>
+<br>
+
 # Architecture
 
 간단한 3-Tier , HPA , RabbitMQ 순으로 3가지의 Architecture 로 나누어서 설계를 하였습니다.
@@ -132,7 +136,11 @@ Front,Back 각각 한개의 POD 만 작성해서 Test 한 결과 입니다.
 우리가 생각한 결과는 1번에서 3번으로 가면서 GET,POST 처리량이 더욱더 증가할것을 예상했지만 그렇지 못한것은 우리 모두가 가져야할 책임입니다.
 
 
-# Test
+----
+<br>
+<br>
+
+# 배운점,해결한점
 
 ## 문제발생
 
